@@ -7,32 +7,28 @@ Example Spreadsheet
 
 
 
-#Bash Script 
+# Bash Script 
 The bash script runrss.sh is to perform afe
 
 #!/bin/sh
-# Remove the feeds files that were processed last time 
+#Remove the feeds files that were processed last time 
 rm feeds.cfg
 rm feedsnoblank.cfg
-# Download the current data from a google spreadsheet(s) holding the feeds
+#Download the current data from a google spreadsheet(s) holding the feeds
 python feedspread1tf.py --noauth_local_webserver
 python feedspread2tf.py --noauth_local_webserver
-# Copy the header row needed by the Twython Programme
+#Copy the header row needed by the Twython Programme
 cat feedsfirstline.csv >> feeds.cfg
-# add the records downloaded from the spreadsheets to the combined feeds config
+#dd the records downloaded from the spreadsheets to the combined feeds config
 cat feedspread1tf.csv >> feeds.cfg
 cat feedspread2tf.csv >> feeds.cfg
-# Remove any blank lines from the feeds to form a file with no blanks
+#Remove any blank lines from the feeds to form a file with no blanks
 grep "[!-~]" feeds.cfg > feedsnoblank.cfg
-# Process the 
+#Process the 
 python3 ./rsstotwitternew.py
 
 
-
-
-
-
-Crontab is used to automate the process 
+# Crontab is used to automate the process 
 crontab -e
 Add a line for your 
 */20 * * * * cd /home/pi/documents/yourfolder && ./runrss.sh
