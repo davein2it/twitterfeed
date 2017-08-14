@@ -1,7 +1,7 @@
-# twitterfeed
+# twitterfeed does the following
 Download blog RSSfeeds from google spreadsheet and tweet when a new post is published
 There are several processes
-What this relies on is a google spreadsheet with blog addresses you wish to monitor for tweeting
+What this relies on is a google spreadsheet with rss feed addresses you wish to monitor for tweeting
 
 Example Spreadsheet
 
