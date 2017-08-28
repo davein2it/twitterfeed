@@ -11,4 +11,4 @@ cat gsheettf.csv >> feeds.cfg
 # remove any blank lines from the feeds file into feedsnoblank which will be processed
 grep "[!-~]" feeds.cfg > feedsnoblank.cfg
 # run rsstotwitternew which will tweet new posts
-python3 ../rsstotwitternew.py
+python3 ./rsstotwitternew.py
