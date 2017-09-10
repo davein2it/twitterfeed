@@ -1,9 +1,13 @@
 # twitterfeed does the following
 Download blog RSSfeeds from google spreadsheet and tweet when a new post is published
-There are several processes
 What this relies on is a google spreadsheet with rss feed addresses you wish to monitor for tweeting
 
-Example Spreadsheet
+# This blog outlinethe basics of downlaoding the google sheet via a python script. Acknowledgement 
+http://wescpy.blogspot.co.nz/2016/07/exporting-google-sheet--as-csv.html
+you call the spreadheet through the googleio.py script 
+
+# This blog goes through the basics of using 
+http://samplefive.com/2016/06/send-your-rss-feeds-to-twitter/
 
 
 
