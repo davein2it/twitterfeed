@@ -14,6 +14,7 @@ if not creds or creds.invalid:
     flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
     creds = tools.run_flow(flow, store, flags)
 DRIVE = discovery.build('drive', 'v3', http=creds.authorize(Http()))
+# The FILENAME is the google sheet containing the rrs feed list in the right format.
 FILENAME = 'gsheettf'
 SRC_MIMETYPE = 'application/vnd.google-apps.spreadsheet'
 DST_MIMETYPE = 'text/csv'
